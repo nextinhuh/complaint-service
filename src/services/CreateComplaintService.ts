@@ -2,18 +2,11 @@
 import { getCustomRepository } from 'typeorm';
 
 import Complaint from '../models/Complaint';
-import Address from '../models/Address';
 import Whistleblower from '../models/Whistleblower';
 import ComplaintsRepository from '../repositories/ComplaintRepository';
 import AddressRepository from '../repositories/AddressRepository';
 import WhistleblowerRepository from '../repositories/WhistleblowerRepository';
 import api from './api';
-
-/**
- * Recebimento das informações X
- * Tratativa de erros/excessões /
- * Acesso ao repositório X
- */
 
 interface RequestDTO {
   latitude: string;

@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import appointmentsRouter from './appointments.routes';
+import complaintRouter from './complaints.routes';
 
 const routes = Router();
 
-routes.use('/appointments', appointmentsRouter);
+routes.use('/v1/denuncias', complaintRouter);
 
 export default routes;

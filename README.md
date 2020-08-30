@@ -6,13 +6,13 @@
 
 > 🚴 Node.JS
 
-## :dash: Como rodar a aplicação:   
+## :dash: Como rodar a aplicação:  
 
 > Primeiro, para instalar todas as dependências, deve executar o comando:
 
  `yarn`
  
-  ### Para configurar o banco:
+  ### Para configurar o banco:  
   
  > O nome do banco deve ser:
  
@@ -22,19 +22,19 @@
  
  `yarn typeorm migration:run`
  
- ### Iniciar a API:
+ ### Iniciar a API:  
  
  > Para dar início no servidor, que será acessado pela porta `3000`, deve executar o comando:
  
- `yarn dev:server`
+ `yarn dev:server`  
  
  Tendo que receber uma mensagem como:
  
- `🚀 Server started on port 3000!`
+ `🚀 Server started on port 3000!`  
  
- Após isso, o servidor estará ativo e podendo receber requisições `POST` na rota:
+ Após isso, o servidor estará ativo e podendo receber requisições `POST` na rota:  
  
- ✅  `http://localhost:3000/v1/denuncias`
+ ✅  `http://localhost:3000/v1/denuncias`  
  
  ##  📑 Rodando os testes:
  

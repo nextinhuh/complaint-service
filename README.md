@@ -18,13 +18,13 @@
  
  `complaint-service`
  
- > Depois, rodar as migrations, deve executar o comando:
+ > Depois, para rodar as migrations, deve executar o comando:
  
  `yarn typeorm migration:run`
  
  ### Iniciar a API:
  
- > Para dar start no servidor, que será acessado pela porta `3000`, deve executar o comando:
+ > Para dar início no servidor, que será acessado pela porta `3000`, deve executar o comando:
  
  `yarn dev:server`
  

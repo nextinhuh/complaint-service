@@ -44,29 +44,6 @@ class CreateComplaintService {
     longitude,
     whistleblower,
   }: RequestDTO): Promise<ComplaintResponse> {
-    if (
-      whistleblower === undefined ||
-      complaint === undefined ||
-      latitude === undefined ||
-      longitude === undefined
-    ) {
-      throw {
-        message: 'This request is invalid.',
-        code: '04',
-      };
-    }
-    if (whistleblower.cpf === '' || whistleblower.name === '') {
-      throw {
-        message: 'The whistleblower is missing.',
-        code: '01',
-      };
-    }
-    if (complaint.title === '' || complaint.description === '') {
-      throw {
-        message: 'The complaint is missing.',
-        code: '03',
-      };
-    }
     const complaintsRepository = getCustomRepository(ComplaintsRepository);
     const addressRepository = getCustomRepository(AddressRepository);
     const whistleblowerRepository = getCustomRepository(

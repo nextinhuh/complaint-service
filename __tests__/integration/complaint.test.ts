@@ -8,7 +8,7 @@ describe('Create a new complaint missing any arguments', () => {
   it('Should recive status error number 400 and message, when create a new complaint whitout an complaint', async () => {
     const complaint = {
       title: '',
-      description: '',
+      description: 'Existe um esgoto a céu aberto.',
     };
     const whistleblower = {
       name: 'José',
@@ -28,8 +28,8 @@ describe('Create a new complaint missing any arguments', () => {
       })
       .expect(400, {
         error: {
-          message: 'The complaint is missing.',
-          code: '03',
+          message: ['Title argument of complaint is missing.'],
+          code: '01',
         },
       });
   });
@@ -40,7 +40,7 @@ describe('Create a new complaint missing any arguments', () => {
       description: 'Existe um esgoto a céu aberto.',
     };
     const whistleblower = {
-      name: '',
+      name: 'José',
       cpf: '',
     };
 
@@ -57,7 +57,7 @@ describe('Create a new complaint missing any arguments', () => {
       })
       .expect(400, {
         error: {
-          message: 'The whistleblower is missing.',
+          message: ['CPF argument of whistleblower is missing.'],
           code: '01',
         },
       });
@@ -110,11 +110,12 @@ describe('Create a new complaint missing any arguments', () => {
       .send({
         complaint,
         latitude,
+        longitude,
       })
       .expect(400, {
         error: {
-          message: 'This request is invalid.',
-          code: '04',
+          message: ['CPF argument of whistleblower is missing.'],
+          code: '01',
         },
       });
   });
